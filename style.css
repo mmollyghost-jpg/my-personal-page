@@ -167,7 +167,7 @@ ul {
 }
 .timeline-item {
   margin: 16px 0 16px 16px;
-  opacity: 0;
+  opacity: 1;
   transform: translateY(12px);
   transition: opacity 400ms ease, transform 400ms ease;
 }
