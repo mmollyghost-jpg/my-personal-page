@@ -1,26 +1,30 @@
+
 html {
-  font-size: 20px; /* 調小一點：設定為 20px */
+  font-size: 20px;
 }
 
 body {
   font-family: '標楷體', 'PMingLiU', Arial, sans-serif;
-  font-size: 1rem; /* 使用根字級（22px）為基準 */
+  font-size: 1rem;
   background: #f4f4f4;
   margin: 0;
   padding: 0;
   color: #333;
 }
 
+/* 導覽列 */
 header {
   background: #2c3e50;
   color: #fff;
   padding: 32px 0 16px 0;
   text-align: center;
 }
+
 header h1 {
   margin: 0 0 8px 0;
   font-size: 2.5rem;
 }
+
 nav ul {
   list-style: none;
   padding: 0;
@@ -29,15 +33,19 @@ nav ul {
   justify-content: center;
   gap: 24px;
 }
+
 nav a {
   color: #fff;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.2s;
 }
+
 nav a:hover {
   color: #7472ee;
 }
+
+/* 主要內容 */
 section {
   background: #fff;
   margin: 32px auto;
@@ -46,29 +54,30 @@ section {
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
-/* 新增：section 統一 inner 限制寬度 */
+
 .container {
   max-width: 1000px;
   margin: 0 auto 48px auto;
   padding: 16px;
 }
+
 h2 {
   color: #2c3e50;
   margin-top: 0;
 }
+
 ul {
   padding-left: 20px;
 }
 
-/* Tag cloud for skills */
+/* 技能標籤 */
 .tag-cloud {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 12px 16px;
   align-items: center;
-  white-space: nowrap; /* 保持單排 */
-  overflow-x: visible; /* 不需橫向捲動 */
 }
+
 .tag {
   display: inline-block;
   padding: 10px 16px;
@@ -78,64 +87,68 @@ ul {
   border: 1px solid rgba(41,128,185,0.08);
   box-shadow: 0 2px 6px rgba(41,128,185,0.04);
   cursor: pointer;
-  text-decoration: none; /* 取消底線 */
+  text-decoration: none;
   position: relative;
-  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
-  font-size: 1.1rem; /* 加大字體 */
-  margin-right: 0; /* 移除右邊距，用 gap 控制 */
-  flex-shrink: 0; /* 防止標籤被壓縮 */
-  flex-grow: 1; /* 讓標籤平均分配空間填滿一行 */
-  text-align: center; /* 文字置中 */
+  transition: transform 160ms ease,
+              box-shadow 160ms ease,
+              background 160ms ease;
+  font-size: 1.1rem;
+  margin-right: 0;
+  flex-shrink: 0;
+  flex-grow: 1;
+  text-align: center;
 }
-.tag:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgba(41,128,185,0.12); text-decoration: none; }
 
-/* Alternate backgrounds: odd = white, even = light blue */
+.tag:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(41,128,185,0.12);
+  text-decoration: none;
+}
+
+/* 技能標籤交錯背景 */
 .tag-cloud .tag:nth-child(odd) {
   background: linear-gradient(180deg,#eaf6ff,#ddf7ff);
   border-color: rgba(41,128,185,0.14);
 }
+
 .tag-cloud .tag:nth-child(even) {
   background: #ffffff;
   border-color: rgba(41,128,185,0.06);
 }
 
-/* 顯示 data-percent 為徽章 */
+/* 顯示技能百分比 */
 .tag::after {
   content: attr(data-percent) "%";
   display: inline-block;
   margin-left: 4px;
   background: #2980b9;
   color: #fff;
-  font-size: 12px; /* 調大到 12px */
+  font-size: 12px;
   padding: 3px 6px;
   border-radius: 10px;
   vertical-align: middle;
   box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  opacity: 0; /* 預設隱藏 */
+  opacity: 0;
   transform: scale(1);
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-/* 在淺藍背景時讓徽章顏色更深以維持對比 */
 .tag-cloud .tag:nth-child(odd)::after {
   background: #1f6fa8;
 }
 
-/* hover 顯示並放大百分比徽章 */
 .tag:hover::after {
   opacity: 1;
   transform: scale(1.3);
 }
 
-#contact p {
-  font-size: 1.1rem;
-}
-/* About */
+/* 關於我 */
 .about-inner {
   display: flex;
   gap: 20px;
   align-items: center;
 }
+
 .avatar {
   width: 160px;
   height: 160px;
@@ -148,44 +161,49 @@ ul {
   justify-content: center;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
+
 .avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .avatar-placeholder {
   color: #666;
   font-weight: bold;
 }
-.intro-text p { margin: 8px 0; }
 
-/* Timeline */
+.intro-text p {
+  margin: 8px 0;
+}
+
+/* 經歷時間軸 */
 .timeline {
   position: relative;
   padding-left: 24px;
   border-left: 2px dashed #e0e0e0;
 }
+
 .timeline-item {
   margin: 16px 0 16px 16px;
-  opacity: 1;
-  transform: translateY(12px);
-  transition: opacity 400ms ease, transform 400ms ease;
 }
-.timeline-item.in-view {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 .timeline-item .time {
   font-weight: 700;
   color: #2c3e50;
 }
 
-/* Portfolio grid and cards */
+.timeline-item .content {
+  margin: 6px 0;
+}
+
+/* 作品集 */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
+
 .card {
   background: #fff;
   border-radius: 10px;
@@ -193,40 +211,93 @@ ul {
   overflow: hidden;
   transition: transform 220ms ease, box-shadow 220ms ease;
 }
+
 .card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
+
 .card-media {
   height: 140px;
   background: linear-gradient(135deg,#cfe9ff,#97c2ff);
-  display:flex;align-items:center;justify-content:center;color:#034; font-weight:700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #034;
+  font-weight: 700;
   overflow: hidden;
 }
-.card-media img { width:100%; height:100%; display:block; object-fit: cover; }
-.card-body { padding: 12px 16px; }
-.card-body h3 { margin: 0 0 6px 0; }
-.btn { color:#2980b9; text-decoration:none; font-weight:600; }
 
-/* Click-to-copy style */
-.click-copy { color:#2980b9; cursor:pointer; }
+.card-media img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
 
-/* 間距與行動裝置響應 */
+.card-body {
+  padding: 12px 16px;
+}
+
+.card-body h3 {
+  margin: 0 0 6px 0;
+}
+
+.btn {
+  color: #2980b9;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* 按鈕樣式 */
+button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+button:hover {
+  background: #7472ee;
+}
+
+/* 手機版排版 */
 @media (max-width: 600px) {
   section {
     padding: 16px;
   }
+
   nav ul {
     flex-direction: column;
     gap: 8px;
   }
-  .about-inner { flex-direction: column; align-items: flex-start; }
-  .avatar { width: 120px; height: 120px; }
-  .portfolio-grid { grid-template-columns: 1fr; }
-  .container { padding: 12px; }
+
+  .about-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    flex: 0 0 120px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 12px;
+  }
 }
 
-/* 小型平板至桌面調整 */
+/* 平板版排版 */
 @media (min-width: 601px) and (max-width: 900px) {
-  .portfolio-grid { grid-template-columns: repeat(2,1fr); }
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

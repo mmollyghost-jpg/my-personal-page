@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>個人簡歷網站</title>
+  <title> Personal page </title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <h1>我的個人簡歷</h1>
@@ -15,113 +17,174 @@
         <li><a href="#skills">技能</a></li>
         <li><a href="#experience">經歷</a></li>
         <li><a href="#portfolio">作品集</a></li>
-        <li><a href="#contact">聯絡方式</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="container">
+
     <section id="about" class="about section">
       <div class="about-inner">
         <div class="avatar">
-          <img src="avatar.jpg" alt="許家瑜的頭像照片" />
+          <img src="avatar.jpg" alt="許家瑜的頭像照片">
         </div>
+
         <div class="intro-text">
           <h2>關於我</h2>
-          <p>我叫許家瑜，目前是輔仁大學大三的學生，熱衷嘗試新鮮事物。</p>
-          <p>專長：德文</p>
+          <p>我叫許家瑜，目前是輔仁大學德語系大三的學生，熱衷嘗試新鮮事物。</p>
+          <p>學習領域：德語、醫療資訊與程式設計</p>
           <p>興趣：音樂與桌球</p>
+
+          <button id="aboutBtn">查看更多</button>
+
+          <div id="moreAbout" style="display:none;">
+            <p>
+              我喜歡探索不同領域，也曾參與教育服務、
+              音樂演出與活動企劃。
+            </p>
+            <p>
+              希望能結合語言、資訊科技與創意，
+              找到更多解決問題的方法。
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- 技能 -->
     <section id="skills" class="section">
       <h2>技能</h2>
+
       <div class="tag-cloud" aria-label="技能標籤雲">
         <span class="tag" data-percent="15" title="15%">網頁設計</span>
         <span class="tag" data-percent="5" title="5%">專案管理</span>
         <span class="tag" data-percent="65" title="65%">溝通與團隊協作</span>
-        <a class="tag" data-percent="78" title="78%" href="https://docs.google.com/videos/d/13q-41ovcqAS9CLEeHp5U8Z-DRTHn4KVXC_q8gdpc41U/edit?scene=id.p#scene=id.p" target="_blank" rel="noopener">古箏</a>
-        <a class="tag" data-percent="58" title="58%" href="https://drive.google.com/drive/u/0/search?q=%E6%A1%8C%E7%90%83" target="_blank" rel="noopener">桌球</a>
+
+        <a class="tag" data-percent="78" title="78%"
+           href="https://docs.google.com/videos/d/13q-41ovcqAS9CLEeHp5U8Z-DRTHn4KVXC_q8gdpc41U/edit?scene=id.p#scene=id.p"
+           target="_blank" rel="noopener">古箏</a>
+
+        <a class="tag" data-percent="58" title="58%"
+           href="https://drive.google.com/drive/u/0/search?q=%E6%A1%8C%E7%90%83"
+           target="_blank" rel="noopener">桌球</a>
       </div>
+
+      <button id="colorBtn">試試不同顏色</button>
     </section>
 
+    <!-- 經歷 -->
     <section id="experience" class="section">
       <h2>經歷</h2>
+
       <div class="timeline">
         <h3>國中</h3>
         <div class="timeline-item">
-          <div class="time"></div>
-          <div class="content">學習機器貓 Scratch並到維也納表演古箏。</div>
+          <div class="content">
+            學習機器貓 Scratch，並到維也納表演古箏。
+          </div>
         </div>
 
         <h3>高中</h3>
         <div class="timeline-item">
-          <div class="time"></div>
-          <div class="content">參與音樂社團並在校內表演；學習 Python 作為進階程式語言入門。</div>
+          <div class="content">
+            參與音樂社團並在校內表演；
+            學習 Python 作為進階程式語言入門。
+          </div>
         </div>
 
         <h3>大學</h3>
-        <div class="timeline-item">
-          <div class="time">大一</div>
-          <div class="content">便利商店打工（學習顧客服務與收銀作業）。</div>
-          <div class="content">偏鄉教育中心大學伴（擔任課輔）。</div>
-        </div>
 
-        <div class="timeline-item">
-          <div class="time">大二 </div>
-          <div class="content">偏鄉教育中心帶班老師（擔任課輔與管理班級）。</div>
-          <div class="content">世界壯年運動會志工與司儀（參與大型活動）。</div>
-          <div class="content">宿舍幹部與桌球社財務（舉辦活動與財務管理）。</div>
+        <button id="experienceBtn">查看更多大學經歷</button>
+
+        <div id="collegeExperience">
+
+          <div class="timeline-item">
+            <div class="time">大一</div>
+            <div class="content">
+              便利商店打工（顧客服務與收銀作業）。
+            </div>
+            <div class="content">
+              偏鄉教育中心大學伴（擔任課輔）。
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">大二</div>
+            <div class="content">
+              偏鄉教育中心帶班老師（課輔與班級管理）。
+            </div>
+            <div class="content">
+              世界壯年運動會語言志工與頒獎司儀。
+            </div>
+            <div class="content">
+              宿舍幹部與桌球社財務（活動與財務管理）。
+            </div>
+            <div class="content">
+              文藻萊茵盃德語知識王競賽第一名。
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">大三</div>
+            <div class="content">
+              擔任宿舍副苑代，協助住民溝通及活動規劃。
+            </div>
+            <div class="content">
+              擔任宿舍活動公關組副組長。
+            </div>
+            <div class="content">
+              學習醫療資訊、Java 程式設計及網頁設計。
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
+    <!-- 作品集：保留原本內容 -->
     <section id="portfolio" class="section">
       <h2>作品集</h2>
+
       <div class="portfolio-grid">
         <article class="card">
           <div class="card-media">
-            <img src="ED.png" alt="元宇宙虛擬角色封面" />
+            <img src="ED.png" alt="元宇宙虛擬角色封面">
           </div>
           <div class="card-body">
             <h3>元宇宙虛擬角色</h3>
             <p>以虛擬角色設計為主的投影片展示。</p>
-            <a href="https://docs.google.com/presentation/d/1DmOoTDhi2ql-kcUe1ThvPAaLE_KR1mJl/edit?slide=id.p5#slide=id.p5" class="btn" target="_blank" rel="noopener">查看</a>
+            <a href="https://docs.google.com/presentation/d/1DmOoTDhi2ql-kcUe1ThvPAaLE_KR1mJl/edit?slide=id.p5#slide=id.p5"
+               class="btn" target="_blank" rel="noopener">查看</a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-media">
-            <img src="DE.png" alt="以色列報告封面" />
+            <img src="DE.png" alt="以色列報告封面">
           </div>
           <div class="card-body">
             <h3>以色列報告</h3>
             <p>以色列相關報告投影片（研究與整理）。</p>
-            <a href="https://docs.google.com/presentation/d/1iL24uK0XKB1_PUuXVjL0hMpVwysRKxhe/edit?slide=id.p1#slide=id.p1" class="btn" target="_blank" rel="noopener">查看</a>
+            <a href="https://docs.google.com/presentation/d/1iL24uK0XKB1_PUuXVjL0hMpVwysRKxhe/edit?slide=id.p1#slide=id.p1"
+               class="btn" target="_blank" rel="noopener">查看</a>
           </div>
         </article>
 
         <article class="card">
           <div class="card-media">
-            <img src="SW.png" alt="德語明信片封面" />
+            <img src="SW.png" alt="德語明信片封面">
           </div>
           <div class="card-body">
             <h3>德語明信片</h3>
             <p>德語明信片內容（文件格式展示）。</p>
-            <a href="https://docs.google.com/document/d/1OjygpMaPjWQSC9J_StLAEUpIUG76D4TD/edit" class="btn" target="_blank" rel="noopener">查看</a>
+            <a href="https://docs.google.com/document/d/1OjygpMaPjWQSC9J_StLAEUpIUG76D4TD/edit"
+               class="btn" target="_blank" rel="noopener">查看</a>
           </div>
         </article>
       </div>
     </section>
-
-    <section id="contact" class="section">
-      <h2>聯絡方式</h2>
-      <p>Email: <span id="email" class="click-copy">413160556@m365.fju.edu.tw</span>（點擊可複製）</p>
-      <p>電話號碼: <span id="phone" class="click-copy">0906693965</span>（點擊可複製）</p>
-      <p>Instagram: <span id="instagram" class="click-copy">jiayu_61528</span>（點擊可複製）</p>
-    </section>
   </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
