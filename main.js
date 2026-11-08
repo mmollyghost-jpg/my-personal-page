@@ -5,11 +5,15 @@ $(document).ready(function() {
     $("#moreAbout").toggle();
   });
 
-  $("#colorBtn").click(function() {
-    $("#skills h2").css("color", "#7472ee");
+    $("#juniorBtn").click(function() {
+    $("#juniorExperience").toggle();
   });
-  
-  $("#experienceBtn").click(function() {
+
+  $("#seniorBtn").click(function() {
+    $("#seniorExperience").toggle();
+  });
+
+  $("#collegeBtn").click(function() {
     $("#collegeExperience").toggle();
   });
 
