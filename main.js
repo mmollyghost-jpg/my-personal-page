@@ -5,7 +5,7 @@ $(document).ready(function() {
     $("#moreAbout").toggle();
   });
 
-    $("#juniorBtn").click(function() {
+  $("#juniorBtn").click(function() {
     $("#juniorExperience").toggle();
   });
 
@@ -13,8 +13,7 @@ $(document).ready(function() {
     $("#seniorExperience").toggle();
   });
 
-  $("#collegeBtn").click(function() {
+  $("#experienceBtn").click(function() {
     $("#collegeExperience").toggle();
   });
-
 });
